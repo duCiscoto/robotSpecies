@@ -50,7 +50,7 @@ namespace WWFSpecies
 
             if (paginacao != null)
             {
-                NavegaPagina("https://www.worldwildlife.org" + paginacao.Attributes["href"].Value);
+                NavegaPagina("https://www.worldwildlife.org" + paginacao.GetAttributeValue("href", string.Empty));
 
                 getSpecies(_doc);
             }
